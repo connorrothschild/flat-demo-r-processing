@@ -1,0 +1,25 @@
+name: data
+on:
+  schedule:
+    - cron: 0 0 * * *
+  workflow_dispatch: {}
+  push:
+    paths:
+      - .github/workflows/flat.yml
+      - ./postprocess.ts
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup deno
+        uses: denoland/setup-deno@main
+        with:
+          deno-version: v1.x
+      - name: Check out repo
+        uses: actions/checkout@v2
+      - name: Fetch data
+        uses: githubocto/flat@v2
+        with:
+          http_url: https://mappingpoliceviolence.org/s/MPVDatasetDownload.xlsx
+          downloaded_filename: uncleaned_data.xlsx
+          postprocess: ./postprocess.ts

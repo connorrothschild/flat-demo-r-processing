@@ -8,8 +8,8 @@ import 'https://deno.land/x/flat@0.0.10/mod.ts'
 // await pip_install.status();
 
 // Forwards the execution to the python script
-const py_run = Deno.run({
+const r_run = Deno.run({
     cmd: ['sudo Rscript', './clean-data.R'].concat(Deno.args),
 });
 
-await py_run.status();
+await r_run.status();
