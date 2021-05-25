@@ -1,14 +1,7 @@
 import 'https://deno.land/x/flat@0.0.10/mod.ts'
 
-const r_dl = Deno.run({
-    cmd: ['RUN', 'Rscript', '-e', "install.packages('tidyverse')"]
-});
-
-await r_dl.status();
-
-// install requirements with pip
 const r_install = Deno.run({
-    cmd: ['R', 'CMD', 'INSTALL', 'tidyverse_1.3.1.tar.gz'],
+    cmd: ['RUN', 'Rscript', '-e', "install.packages('tidyverse')"]
 });
 
 await r_install.status();
