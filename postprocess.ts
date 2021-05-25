@@ -1,9 +1,9 @@
 import 'https://deno.land/x/flat@0.0.10/mod.ts'
 
 // install requirements with pip
-// const pip_install = Deno.run({
-//     cmd: ['python', '-m', 'pip', 'install', '-r', 'requirements.txt'],
-// });
+const r_install = Deno.run({
+    cmd: ['R', 'CMD', 'INSTALL', 'tidyverse_1.3.1.tar.gz'],
+});
 
 // await pip_install.status();
 

@@ -1,5 +1,3 @@
-install.packages('tidyverse')
-install.packages('readxl')
 library(tidyverse)
 
 raw_data <- readxl::read_excel("./uncleaned_data.xlsx")
