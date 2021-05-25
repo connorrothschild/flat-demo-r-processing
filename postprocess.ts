@@ -7,8 +7,8 @@ const r_dl = Deno.run({
 await r_dl.status();
 
 const r_install = Deno.run({
-    // cmd: ['Rscript', '-e', "install.packages('tidyverse')"]
-    cmd: ['sudo', 'R', 'CMD', 'INSTALL', "./tidyverse_1.3.1.tar.gz"]
+    cmd: ['Rscript', '-e', "install.packages('./tidyverse_1.3.1.tar.gz', repos = NULL)"]
+    // cmd: ['sudo', 'R', 'CMD', 'INSTALL', "./tidyverse_1.3.1.tar.gz"]
 });
 
 await r_install.status();
