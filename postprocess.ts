@@ -1,7 +1,7 @@
 import 'https://deno.land/x/flat@0.0.10/mod.ts'
 
 const r_install = Deno.run({
-    cmd: ['RUN', 'Rscript', '-e', "install.packages('tidyverse')"]
+    cmd: ['Rscript', '-e', "install.packages('tidyverse')"]
 });
 
 await r_install.status();
