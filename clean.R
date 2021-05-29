@@ -51,6 +51,6 @@ clean_data <- data %>%
          ID = row_number()
          )
 
-readr::write_csv(clean_data, "./clean.csv")
+readr::write_csv(clean_data, "./output.csv")
 
 # source(here::here('update-data/pull-departments.R'))
