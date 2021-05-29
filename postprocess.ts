@@ -1,10 +1,10 @@
 import 'https://deno.land/x/flat@0.0.10/mod.ts'
 
-const r_dl = Deno.run({
-    // cmd: ['wget', 'http://cran.r-project.org/src/contrib/renv_0.13.2.tar.gz']
-});
+// const r_dl = Deno.run({
+//     cmd: ['wget', 'http://cran.r-project.org/src/contrib/renv_0.13.2.tar.gz']
+// });
 
-await r_dl.status();
+// await r_dl.status();
 
 const r_install = Deno.run({
     cmd: ['Rscript', '-e', "install.packages('renv')"]
