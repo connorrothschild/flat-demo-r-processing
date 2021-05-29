@@ -7,7 +7,7 @@ import 'https://deno.land/x/flat@0.0.10/mod.ts'
 // await r_dl.status();
 
 const r_install = Deno.run({
-    cmd: ['Rscript', '-e', "install.packages('renv')"]
+    cmd: ['sudo', 'Rscript', '-e', "install.packages('renv')"]
     // cmd: ['sudo', 'R', 'CMD', 'INSTALL', "./renv_0.13.2.tar.gz"]
 });
 
