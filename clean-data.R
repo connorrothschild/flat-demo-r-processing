@@ -1,4 +1,5 @@
-library(tidyverse)
+library(dplyr)
+library(stringr)
 
 raw_data <- readxl::read_excel("./uncleaned_data.xlsx")
 
