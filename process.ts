@@ -8,7 +8,7 @@ await r_install.status();
 
 // Forwards the execution to the python script
 const r_run = Deno.run({
-    cmd: ['Rscript', './03_postprocess.R']
+    cmd: ['Rscript', './process.R']
 });
 
 await r_run.status();
