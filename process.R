@@ -1,7 +1,7 @@
 library(dplyr)
 library(stringr)
 
-raw_data <- readxl::read_excel("./uncleaned_data.xlsx")
+raw_data <- readxl::read_excel("./raw.xlsx")
 
 data <- raw_data %>% 
   rename("Date" = `Date of Incident (month/day/year)`,
@@ -51,6 +51,6 @@ clean_data <- data %>%
          ID = row_number()
          )
 
-readr::write_csv(clean_data, "./cleaned_data.csv")
+readr::write_csv(clean_data, "./clean.csv")
 
 # source(here::here('update-data/pull-departments.R'))
