@@ -1,4 +1,5 @@
-library(tidyverse)
+renv::restore()
+library(dplyr)
 
 raw_data <- readxl::read_excel("./uncleaned_data.xlsx")
 
