@@ -52,5 +52,3 @@ clean_data <- data %>%
          )
 
 readr::write_csv(clean_data, "./output.csv")
-
-# source(here::here('update-data/pull-departments.R'))
