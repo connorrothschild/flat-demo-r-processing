@@ -4,9 +4,8 @@ on:
     - cron: 0 0 * * * # Runs daily. See https://crontab.cronhub.io/
   workflow_dispatch: {}
   push:
-    paths:
-      - .github/workflows/flat.yml
-      - ./postprocess.ts
+    branches:
+      - master # Or main, or whatever branch you'd like to 'watch'
 jobs:
   scheduled:
     runs-on: ubuntu-latest
